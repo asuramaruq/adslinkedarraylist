@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 public class MyArrayList<E> implements MyList<E> {
     private Object[] arr;//the real array that holds the elements
     private int length=0;
@@ -35,13 +37,14 @@ public class MyArrayList<E> implements MyList<E> {
             throw new IndexOutOfBoundsException();//throws exceptions if invalid index
         }
         int k=0;
-        Object[] newArr= new Object[length--];//decrementing size
-        for(int i=0;i<arr.length;i++){
+        Object[] newArr= new Object[length-1];
+        for(int i=0;i<length;i++){
             if(i==index){
                 continue;
             }
             newArr[k++]=arr[i];//copying all elements except chosen one
         }
+        length--;
         arr=newArr;//override
     }
     @Override
@@ -49,8 +52,23 @@ public class MyArrayList<E> implements MyList<E> {
         return length;//return size of array
     }
     @Override
-    public void clear(){
+    public void clear(){//recreates an array
         arr=new Object[10];
         length=0;
+    }
+    @Override
+    public Iterator<E> iterator(){
+        return new MyIterator();
+    }
+    private class MyIterator implements Iterator<E>{
+        private int cursor;
+        @Override
+        public boolean hasNext(){
+            return cursor<size();
+        }
+        @Override
+        public E next(){
+            return get(cursor++);
+        }
     }
 }
