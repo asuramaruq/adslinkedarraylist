@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e178f52-bc5f-4e68-ba69-179b9164df71" name="Changes" comment="hello world">
-      <change afterPath="$PROJECT_DIR$/src/MyArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyList.java" afterDir="false" />
+    <list default="true" id="2e178f52-bc5f-4e68-ba69-179b9164df71" name="Changes" comment="arraylist constructors, add, get; list interface;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +25,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -48,6 +51,10 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -60,6 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681265758723</updated>
       <workItem from="1681265759856" duration="1181000" />
+      <workItem from="1681382182112" duration="875000" />
     </task>
     <task id="LOCAL-00001" summary="hello world">
       <created>1681265837125</created>
@@ -68,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681265837125</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="arraylist constructors, add, get; list interface;">
+      <created>1681382342876</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681382342876</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +102,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hello world" />
-    <option name="LAST_COMMIT_MESSAGE" value="hello world" />
+    <MESSAGE value="arraylist constructors, add, get; list interface;" />
+    <option name="LAST_COMMIT_MESSAGE" value="arraylist constructors, add, get; list interface;" />
   </component>
 </project>

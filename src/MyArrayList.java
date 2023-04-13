@@ -4,7 +4,7 @@ public class MyArrayList<E> implements MyList<E> {
     public MyArrayList(){//constructor creates a new array size 10 when called without value
         this(10);
     }//creates an array with capacity 10
-    public MyArrayList(int n){//creates a array with size n
+    public MyArrayList(int n){//creates an array with size n
         arr=new Object[n];
     }//creates an array with n capacity
     private void increaseCapacity(){//increases the value of an array when user needs more elements
@@ -25,9 +25,32 @@ public class MyArrayList<E> implements MyList<E> {
     @Override
     public E get(int index){
         if(index>=length){
-            return null;//if index out of bounds returns null
+            throw new IndexOutOfBoundsException();//throws exception if invalid index
         }
         return (E)arr[index];//returns element
     }
-
+    @Override
+    public void remove(int index){
+        if(index>=length){
+            throw new IndexOutOfBoundsException();//throws exceptions if invalid index
+        }
+        int k=0;
+        Object[] newArr= new Object[length--];//decrementing size
+        for(int i=0;i<arr.length;i++){
+            if(i==index){
+                continue;
+            }
+            newArr[k++]=arr[i];//copying all elements except chosen one
+        }
+        arr=newArr;//override
+    }
+    @Override
+    public int size(){
+        return length;//return size of array
+    }
+    @Override
+    public void clear(){
+        arr=new Object[10];
+        length=0;
+    }
 }
