@@ -25,6 +25,19 @@ public class MyArrayList<E> implements MyList<E> {
         arr[length++]=element;//adds next element
     }
     @Override
+    public void add(E element, int index){
+        if(index>=arr.length){
+            increaseCapacity();
+        }
+        if(arr[index]!=null){
+            for(int i=arr.length-1;i>=index;i--){
+                arr[i+1]=arr[i];
+            }
+        }
+        arr[index]=element;
+        length++;
+    }
+    @Override
     public E get(int index){
         if(index>=length){
             throw new IndexOutOfBoundsException();//throws exception if invalid index
@@ -55,6 +68,24 @@ public class MyArrayList<E> implements MyList<E> {
     public void clear(){//recreates an array
         arr=new Object[10];
         length=0;
+    }
+    @Override
+    public boolean contains(Object o){
+        for(int i=0;i<length;i++){
+            if(arr[i]==o){
+                return true;
+            }
+        }
+        return false;
+    }
+    @Override
+    public int indexOf(Object o){
+        for(int i=0;i<length;i++){
+            if(arr[i]==o){
+                return i;
+            }
+        }
+        return -1;
     }
     @Override
     public Iterator<E> iterator(){
