@@ -1,10 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        MyArrayList<Integer> arr=new MyArrayList();
-        arr.add(1);
-        arr.add(2);
-        arr.add(3);
-        for(var element : arr){
+        MyArrayList<Integer> link=new MyArrayList();
+        link.addLast(1);
+        link.addLast(2);
+        link.addLast(3);
+        link.addFirst(5);
+        for(var element : link){
             System.out.println(element);
         }
     }

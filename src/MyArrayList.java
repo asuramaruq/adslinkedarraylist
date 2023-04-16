@@ -18,7 +18,21 @@ public class MyArrayList<E> implements MyList<E> {
         arr=newArr;//override main array with new one
     }
     @Override
-    public void add(E element){
+    public void addFirst(E element){
+        if(length==arr.length){
+            increaseCapacity();
+        }
+        Object[] newArr=new Object[length+1];
+        int k=1;
+        for(int i=0;i<length;i++){
+            newArr[k++]=arr[i];
+        }
+        newArr[0]=element;
+        length++;
+        arr=newArr;
+    }
+    @Override
+    public void addLast(E element){
         if(length==arr.length){//if user hit max capacity increase the size of array
             increaseCapacity();
         }
@@ -31,7 +45,7 @@ public class MyArrayList<E> implements MyList<E> {
         }
         if(arr[index]!=null){
             for(int i=arr.length-1;i>=index;i--){
-                arr[i+1]=arr[i];
+                arr[i]=arr[i-1];
             }
         }
         arr[index]=element;
