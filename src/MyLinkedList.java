@@ -1,7 +1,7 @@
 import java.util.Iterator;
 
 public class MyLinkedList<E> implements MyList<E>{
-    private class MyNode{
+    private class MyNode{//the node class for storing the addresses for prev and next elements
         private E element;
         private MyNode next;
         private MyNode prev;
@@ -20,7 +20,7 @@ public class MyLinkedList<E> implements MyList<E>{
     public MyLinkedList(){
         this.clear();
     }
-    private void insertFirst(E element){
+    private void insertFirst(E element){//inserts the first element into empty list
         MyNode node=new MyNode(element);
         node.prev=null;
         node.next=null;
@@ -29,7 +29,7 @@ public class MyLinkedList<E> implements MyList<E>{
         length++;
     }
     @Override
-    public void addFirst(E element){
+    public void addFirst(E element){//adds element to the start
         MyNode node=new MyNode(element);
         if(head==null){
             insertFirst(element);
@@ -42,7 +42,7 @@ public class MyLinkedList<E> implements MyList<E>{
         length++;
     }
     @Override
-    public void addLast(E element){
+    public void addLast(E element){//adds element to the end
         MyNode node=new MyNode(element);
         if(head==null){
             insertFirst(element);
@@ -55,7 +55,7 @@ public class MyLinkedList<E> implements MyList<E>{
         length++;
     }
     @Override
-    public void add(E element, int index){
+    public void add(E element, int index){//adds at given index
         if(index>length||index<0){
             throw new IndexOutOfBoundsException();
         }
@@ -73,7 +73,7 @@ public class MyLinkedList<E> implements MyList<E>{
     }
 
     @Override
-    public E get(int index){
+    public E get(int index){//returns the elements on index
         if(index>length||index<0){
             throw new IndexOutOfBoundsException();
         }
@@ -85,7 +85,7 @@ public class MyLinkedList<E> implements MyList<E>{
     }
 
     @Override
-    public void remove(int index){
+    public void remove(int index){//removes the element on index
         if(index>length||index<0){
             throw new IndexOutOfBoundsException();
         }
@@ -101,23 +101,23 @@ public class MyLinkedList<E> implements MyList<E>{
     }
 
     @Override
-    public int size(){
+    public int size(){//returns size
         return length;
     }
 
     @Override
-    public void clear(){
+    public void clear(){//recreates the list
         this.head=null;
         this.tail=null;
         this.length=0;
     }
 
     @Override
-    public boolean contains(Object o){//doesnt work for some reason
-        E element=(E)o;
+    public boolean contains(Object o){//checks if object exists
         MyNode temp=head;
-        while(temp!=null){
-            if(temp.element==element){
+        for(int i=0;i<length&&temp.next!=null;i++){
+            temp=temp.next;
+            if(temp.element==o){
                 return true;
             }
         }
@@ -125,13 +125,10 @@ public class MyLinkedList<E> implements MyList<E>{
     }
 
     @Override
-    public int indexOf(Object o){//doesnt work
-        E element=(E)o;
+    public int indexOf(Object o){//return the index of object if exist
         MyNode temp=head;
-        int i=-1;
-        while(temp!=null){
-            i++;
-            if(temp.element==element){
+        for(int i=0;i<length&&temp.next!=null;i++,temp=temp.next){
+            if(temp.element==o){
                 return i;
             }
         }

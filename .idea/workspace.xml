@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e178f52-bc5f-4e68-ba69-179b9164df71" name="Changes" comment="contains, indexof, add methods">
-      <change afterPath="$PROJECT_DIR$/src/MyLinkedList.java" afterDir="false" />
+    <list default="true" id="2e178f52-bc5f-4e68-ba69-179b9164df71" name="Changes" comment="idk almost everything ig, just need to debug two methods in linked list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +75,7 @@
       <workItem from="1681564773371" duration="739000" />
       <workItem from="1681620322471" duration="1429000" />
       <workItem from="1681626971466" duration="4028000" />
-      <workItem from="1681637682197" duration="3966000" />
+      <workItem from="1681637682197" duration="6258000" />
     </task>
     <task id="LOCAL-00001" summary="hello world">
       <created>1681265837125</created>
@@ -114,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681557526990</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="idk almost everything ig, just need to debug two methods in linked list">
+      <created>1681641795176</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681641795177</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +142,7 @@
     <MESSAGE value="arraylist remove, size, clear;" />
     <MESSAGE value="adding iterator, methods tests, remove fix;" />
     <MESSAGE value="contains, indexof, add methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="contains, indexof, add methods" />
+    <MESSAGE value="idk almost everything ig, just need to debug two methods in linked list" />
+    <option name="LAST_COMMIT_MESSAGE" value="idk almost everything ig, just need to debug two methods in linked list" />
   </component>
 </project>

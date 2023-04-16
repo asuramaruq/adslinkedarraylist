@@ -18,7 +18,7 @@ public class MyArrayList<E> implements MyList<E> {
         arr=newArr;//override main array with new one
     }
     @Override
-    public void addFirst(E element){
+    public void addFirst(E element){//adds the element to the start of the array
         if(length==arr.length){
             increaseCapacity();
         }
@@ -32,14 +32,14 @@ public class MyArrayList<E> implements MyList<E> {
         arr=newArr;
     }
     @Override
-    public void addLast(E element){
+    public void addLast(E element){//adds element to the end
         if(length==arr.length){//if user hit max capacity increase the size of array
             increaseCapacity();
         }
         arr[length++]=element;//adds next element
     }
     @Override
-    public void add(E element, int index){
+    public void add(E element, int index){//adds element to the given index
         if(index>=arr.length){
             increaseCapacity();
         }
@@ -52,14 +52,14 @@ public class MyArrayList<E> implements MyList<E> {
         length++;
     }
     @Override
-    public E get(int index){
+    public E get(int index){//returns the element on index
         if(index>=length){
             throw new IndexOutOfBoundsException();//throws exception if invalid index
         }
         return (E)arr[index];//returns element
     }
     @Override
-    public void remove(int index){
+    public void remove(int index){//removes element from index
         if(index>=length){
             throw new IndexOutOfBoundsException();//throws exceptions if invalid index
         }
@@ -84,7 +84,7 @@ public class MyArrayList<E> implements MyList<E> {
         length=0;
     }
     @Override
-    public boolean contains(Object o){
+    public boolean contains(Object o){//checks if array has this object
         for(int i=0;i<length;i++){
             if(arr[i]==o){
                 return true;
@@ -93,7 +93,7 @@ public class MyArrayList<E> implements MyList<E> {
         return false;
     }
     @Override
-    public int indexOf(Object o){
+    public int indexOf(Object o){//return index of an object if exist
         for(int i=0;i<length;i++){
             if(arr[i]==o){
                 return i;
